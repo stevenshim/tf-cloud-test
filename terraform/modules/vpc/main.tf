@@ -60,10 +60,10 @@ resource "aws_route_table" "vpc_public_rt" {
 resource "aws_route_table" "vpc_private_rt" {
   vpc_id = aws_vpc.vpc.id
 
-  route {
-    cidr_block = "0.0.0.0/0"
+//  route {
+//    cidr_block = "0.0.0.0/0"
 //    nat_gateway_id = aws_nat_gateway.vpc_ngw.id
-  }
+//  }
 
   tags = {
     Name = "${var.vpc_name}-private-rt"
